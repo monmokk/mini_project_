@@ -1,9 +1,11 @@
 const express = require('express');
+const userRouter = require('./routes/user');
+const boardRouter = require('./routes/board');
+const kakaoLogin = require("./middlewares/social-login-middle");
+
 const app = express();
 const port = 4000;
 
-const userRouter = require("./routes/user");
-const boardRouter = require("./routes/board");
 
 app.listen(port, () => {
     console.log(`
@@ -13,6 +15,7 @@ app.listen(port, () => {
     ##############################`);
 });
 
+kakaoLogin()
 app.use(express.json());
 app.use("/api", [boardRouter, userRouter]);
 

@@ -63,12 +63,24 @@ const updatePage = async (req, res) => {
     res.status(200).send({})
 }
 
-
+const fileUpload = async (req, res) => {
+    try {
+        res.status(200).send({
+            result: req.file.filename,
+        });
+    } catch (err) {
+        console.error(err);
+        res.status(400).send({
+            message: `${err}`,
+        });
+    }
+}
 
 module.exports = {
     listUp,
     detailPage,
     savePage,
     deletePage,
-    updatePage
+    updatePage,
+    fileUpload
 }

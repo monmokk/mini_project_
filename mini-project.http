@@ -1,24 +1,6 @@
-#GET http://localhost:4000/api/duplicates/email/mjmjmj
+GET http://localhost:4000/api/duplicates/email/mjmjmj
 
-#POST http://localhost:4000/api/signup
-#Authorization:
-#Content-Type: application/json
-#
-#{
-#  "email":"test123@test.com",
-#  "nickname":"tttt",
-#  "password":"qwer12345",
-#  "confirmPassword": "qwer12345"
-#}
 
-#POST http://localhost:4000/api/login
-#Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1NTE0MDExM30.SAnoYMJVL9oW-bXKyJnthyehBTvaJhIAEXIeEui3jeA
-#Content-Type: application/json
-#
-#{
-#  "email": "test123@test.com",
-#  "password": "qwer12345"
-#}
 
 #GET http://localhost:4000/api/travels/3
 #Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1NTE0MDExM30.SAnoYMJVL9oW-bXKyJnthyehBTvaJhIAEXIeEui3jeA
@@ -32,11 +14,29 @@
 #  "title": "title-update",
 #  "content": "content - update"
 #}
-POST http://localhost:4000/api/travels
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1NTE0MDExM30.SAnoYMJVL9oW-bXKyJnthyehBTvaJhIAEXIeEui3jeA
-Content-Type: application/json
-
-{
-  "title": "title",
-  "content": "content"
-}
+#POST http://localhost:4000/api/travels
+#Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1NTE0MDExM30.SAnoYMJVL9oW-bXKyJnthyehBTvaJhIAEXIeEui3jeA
+#Content-Type: application/json
+#
+#{
+#  "title": "title",
+#  "content": "content"
+#}
+#POST http://localhost:4000/api/login
+#Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1NTE0MDExM30.SAnoYMJVL9oW-bXKyJnthyehBTvaJhIAEXIeEui3jeA
+#Content-Type: application/json
+#
+#{
+#  "email": "test123@test.com",
+#  "password": "qwer12345"
+#}
+#POST http://localhost:4000/api/signup
+#Authorization:
+#Content-Type: application/json
+#
+#{
+#  "email":"test1234@test.com",
+#  "nickname":"tttt1",
+#  "password":"qwer12345",
+#  "confirmPassword": "qwer12345"
+#}
