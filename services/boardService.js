@@ -9,10 +9,17 @@ const listUp = async () => {
     });
 }
 const detailPage = async (boardId) => {
-    return await Board.findByPk(boardId, {});
+    return await Board.findByPk(boardId, {
+        include: {
+            model: User,
+            attributes: ['nickname']
+        }
+    });
 }
 const createPage = async (board) => {
     return await Board.create(board)
+    //.increment({boardId: 1}, { where: { boardId: null } })
+    // return await Board.findOne({order: [['boardId', 'DESC']]})
 }
 const deletePage = async (boardId) => {
     return await Board.destroy({where: {boardId}})

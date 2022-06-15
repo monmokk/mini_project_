@@ -15,6 +15,7 @@ const createUser = async (fields) => {
 
 const loginUser = async (email) => {
     return await User.findOne({
+        attributes: [],
         where: {
             email
         },
