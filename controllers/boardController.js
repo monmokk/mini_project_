@@ -8,7 +8,6 @@ const listUp = async (req, res) => {
 }
 const detailPage = async (req, res) => {
     const { boardId } = req.params;
-    console.log(boardId)
     const detailPage = await boardService.detailPage(boardId);
     res.status(200).send({
         detailPage

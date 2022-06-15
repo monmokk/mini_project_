@@ -4,7 +4,6 @@ const { User } = require("../models");
 const checkLogin = (req, res, next) => {
     const { authorization } = req.headers;
     const [tokenType, tokenValue] = authorization.split(' ');
-    console.log(tokenType)
 
     if (tokenType !== 'Bearer') {
         res.status(401).send({
@@ -15,7 +14,6 @@ const checkLogin = (req, res, next) => {
 
     try {
         const { userId } = jwt.verify(tokenValue, "my-secret-key");
-        console.log(userId)
         User.findByPk(userId).then((user) => {
             res.locals.user = user;
             next();

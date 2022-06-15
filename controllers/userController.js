@@ -40,7 +40,6 @@ const login = async (req, res) => {
     const { email, password } = await postAuthSchema.validateAsync(req.body);
     const user = await userService.loginUser(email);
     const authenticate = await bcrypt.compare(password, user.password);
-    console.log(authenticate)
     if (!user || !authenticate) {
         res.status(400).send({
             errorMessage: "이메일 또는 패스워드가 잘못됐습니다.",
