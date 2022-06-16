@@ -19,6 +19,7 @@ const savePage = async (req, res) => {
 
     const result = await boardService.createPage({title, content, userId});
     result.boardId = result['null']
+    console.log(result)
     res.status(200).send({
         result
     })

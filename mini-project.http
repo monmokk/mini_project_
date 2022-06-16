@@ -27,8 +27,8 @@
 #Content-Type: application/json
 #
 #{
-#  "title": "헤엑..",
-#  "content": "헤에에에엑.."
+#  "title": "머냐고..",
+#  "content": "먼데"
 #}
 POST http://localhost:4000/api/travels
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1NTE0MDExM30.SAnoYMJVL9oW-bXKyJnthyehBTvaJhIAEXIeEui3jeA
